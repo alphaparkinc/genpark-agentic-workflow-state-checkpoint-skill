@@ -1,0 +1,39 @@
+{
+  "name": "genpark-agentic-workflow-state-checkpoint-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Stateful autonomous workflow checkpoint manager calculating cryptographic state hashes and safe rollback points.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "agent-orchestration",
+  "tags": [
+    "state-machine",
+    "checkpointing",
+    "rollback",
+    "workflow-recovery",
+    "agent-state"
+  ],
+  "inputs": {
+    "session_id": {
+      "type": "string"
+    },
+    "step_name": {
+      "type": "string"
+    },
+    "current_state_payload": {
+      "type": "object"
+    }
+  },
+  "outputs": {
+    "checkpoint_id": {
+      "type": "string"
+    },
+    "state_hash": {
+      "type": "string"
+    },
+    "safe_rollback_target": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
